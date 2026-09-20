@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router'
 import './App.css'
 import { Login } from './components/login'
 import { Planner } from './components/planner'
+import  Periodes  from './components/Periodes'
 
 //import { Login } from './components/login.tsx'
 /*import { Comptes } from './components/comptes.tsx'
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path='/planner' element={<Planner/>}/>
+        <Route path='/periodes' element={<Periodes/>}/>
       </Routes>
     </>
   )

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Periode } from "../interfaces/periodes";
 import { useMois, type IMois } from "../hooks/useMois";
 import Mois from "./Mois";
@@ -16,7 +16,7 @@ const Annee: React.FC<AnneeProps> = ({periode, listeJoursCongesFeries, typeSaisi
     
     const listeMois = useMois(); 
     
-    var tabJoursTravaillesMois:number[]=Array(12);
+    const tabJoursTravaillesMois= useRef<number[]>(Array(12).fill(0));
 
     const [ nbJoursTravailes, setNbJoursTravailles ] = useState<number>(0);
 
@@ -25,9 +25,9 @@ const Annee: React.FC<AnneeProps> = ({periode, listeJoursCongesFeries, typeSaisi
             }, [periode]);
 
     const majJoursTravailles = (nMois: number, nbJours:number) => {
-        tabJoursTravaillesMois[nMois]=nbJours;
+        tabJoursTravaillesMois.current[nMois]=nbJours;
         let total=0;
-        for( var element of tabJoursTravaillesMois) {
+        for( var element of tabJoursTravaillesMois.current) {
             total+=isNaN(element)?0: element;
         }
         setNbJoursTravailles(total);

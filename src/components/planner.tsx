@@ -72,7 +72,7 @@ export const Planner = () => {
 					</tr>
 					<tr>
 						<td>RTT</td>
-						<td className="rtt_jour"></td>
+						<td className="rtt1"></td>
 					</tr>
 					<tr>
 						<td>Congès</td>
@@ -80,11 +80,11 @@ export const Planner = () => {
 					</tr>
 					<tr>
 						<td>CP anticipés</td>
-						<td className="cpa_jour">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td>
+						<td className="cpa1">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td>
 					</tr>
 					<tr>
 						<td>CP sans solde</td>
-						<td className="cps_jour">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td>
+						<td className="cps1">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td>
 					</tr>
                     </tbody>
 				</table>
